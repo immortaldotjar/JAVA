@@ -6,17 +6,17 @@ class SSortArray {
         System.out.print("Enter the dimension of array: ");
         int n = sc.nextInt();
 
-        int a[] = new int[n];
+        int[] a = new int[n];
 
         for (int i = 0; i < n; i++) {
             System.out.print("Enter element a[" + i + "]: ");
             a[i] = sc.nextInt();
         }
-
-        for (int i = n - 1; i > 0; i--) {
-            int m = 0;
-            for (int j = 1; j <= i; j++) {
-                if (a[j] > a[m]) {
+        
+        for (int i = 0; i < n - 1; i++) {
+            int m = i; 
+            for (int j = i + 1; j < n; j++) {
+                if (a[j] < a[m]) { 
                     m = j;
                 }
             }
